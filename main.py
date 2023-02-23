@@ -263,53 +263,64 @@ def diabetes(message):
 
 @bot.message_handler(func=lambda message: message.text=='рацион на день')
 def diet(message):
+    try:
+        if chapter[message.from_user.id] == 0 or chapter[message.from_user.id] == 1:
+            breakfast_position = random.choice(list(breakfast_dia.keys()))
+            dinner_position = random.choice(list(dinner_dia.keys()))
+            supper_position = random.choice(list(supper_dia.keys()))
 
-    if chapter[message.from_user.id] == 0 or chapter[message.from_user.id] == 1:
-        breakfast_position = random.choice(list(breakfast_dia.keys()))
-        dinner_position = random.choice(list(dinner_dia.keys()))
-        supper_position = random.choice(list(supper_dia.keys()))
+            text_diet = "<b>Завтрак:</b>\n" \
+                        f"{breakfast_position} → <a href='{breakfast_dia[breakfast_position]}'>рецепт</a>\n\n" \
+                        f"<b>Обед:</b>\n" \
+                        f"{dinner_position} → <a href='{dinner_dia[dinner_position]}'>рецепт</a>\n\n" \
+                        f"<b>Ужин:</b>\n" \
+                        f"{supper_position} → <a href='{supper_dia[supper_position]}'>рецепт</a>"
+            bot.send_message(message.chat.id, text_diet, parse_mode='html')
 
-        text_diet = "<b>Завтрак:</b>\n" \
-                    f"{breakfast_position} → <a href='{breakfast_dia[breakfast_position]}'>рецепт</a>\n\n" \
-                    f"<b>Обед:</b>\n" \
-                    f"{dinner_position} → <a href='{dinner_dia[dinner_position]}'>рецепт</a>\n\n" \
-                    f"<b>Ужин:</b>\n" \
-                    f"{supper_position} → <a href='{supper_dia[supper_position]}'>рецепт</a>"
-        bot.send_message(message.chat.id, text_diet, parse_mode='html')
+            if chapter[message.from_user.id] == 0:
+                attentions = "<b>Внимание:</b> <i>Нельзя пропускать ни один приём пищи, в том числе и завтрак. " \
+                             "Необходимо поесть в течение часа/полтора после пробуждения. " \
+                             "До этого рекомендуется выпивать 1-2 стакана воды.\n\n" \
+                             "Ужин должен содержать минимальное количество углеводов и калорий (не более 400).</i>"
 
-        if chapter[message.from_user.id] == 0:
-            attentions = "<b>Внимание:</b> <i>Нельзя пропускать ни один приём пищи, в том числе и завтрак. " \
-                         "Необходимо поесть в течение часа/полтора после пробуждения. " \
-                         "До этого рекомендуется выпивать 1-2 стакана воды.\n\n" \
-                         "Ужин должен содержать минимальное количество углеводов и калорий (не более 400).</i>"
+                bot.send_message(message.chat.id, attentions, parse_mode='html')
+
+            elif chapter[message.from_user.id] == 1:
+                attentions = "<b>Внимание:</b> <i>Следует питаться 2-3 раза в день с интервалом от 4 до 7 часов. " \
+                             "Избегайте перекусов в целях предотвращения резкого скачка инсулина в крови.\n\n" \
+                             "Используйте таблицу ГИ для планирования своего рациона.\n\n" \
+                             "Сахар — ваш враг. Старайтесь употреблять продукты на сахарозаменителях вместе с основным приемом пищи.</i>"
+
+                bot.send_message(message.chat.id, attentions, parse_mode='html')
+
+        elif chapter[message.from_user.id] == 2:
+            attentions = "<b>Внимание:</b> <i>Чтобы точно понимать, какие продукты можно, а какие нельзя, нужно обязательно сдать анализы и проконсультироваться с врачом.\n\n" \
+                         "Я предложу вам универсальные варианты блюд, которые подойдут при любом заболевании ЖКТ.</i>"
 
             bot.send_message(message.chat.id, attentions, parse_mode='html')
 
-        elif chapter[message.from_user.id] == 1:
-            attentions = "<b>Внимание:</b> <i>Следует питаться 2-3 раза в день с интервалом от 4 до 7 часов. " \
-                         "Избегайте перекусов в целях предотвращения резкого скачка инсулина в крови.\n\n" \
-                         "Используйте таблицу ГИ для планирования своего рациона.\n\n" \
-                         "Сахар — ваш враг. Старайтесь употреблять продукты на сахарозаменителях вместе с основным приемом пищи.</i>"
+            breakfast_position = random.choice(list(breakfast_jct.keys()))
+            dinner_position = random.choice(list(dinner_jct.keys()))
+            supper_position = random.choice(list(supper_jct.keys()))
 
-            bot.send_message(message.chat.id, attentions, parse_mode='html')
+            text_diet = "<b>Завтрак:</b>\n" \
+                        f"{breakfast_position} → <a href='{breakfast_jct[breakfast_position]}'>рецепт</a>\n\n" \
+                        f"<b>Обед:</b>\n" \
+                        f"{dinner_position} → <a href='{dinner_jct[dinner_position]}'>рецепт</a>\n\n" \
+                        f"<b>Ужин:</b>\n" \
+                        f"{supper_position} → <a href='{supper_jct[supper_position]}'>рецепт</a>"
+            bot.send_message(message.chat.id, text_diet, parse_mode='html')
 
-    elif chapter[message.from_user.id] == 2:
-        attentions = "<b>Внимание:</b> <i>Чтобы точно понимать, какие продукты можно, а какие нельзя, нужно обязательно сдать анализы и проконсультироваться с врачом.\n\n" \
-                     "Я предложу вам универсальные варианты блюд, которые подойдут при любом заболевании ЖКТ.</i>"
-
-        bot.send_message(message.chat.id, attentions, parse_mode='html')
-
-        breakfast_position = random.choice(list(breakfast_jct.keys()))
-        dinner_position = random.choice(list(dinner_jct.keys()))
-        supper_position = random.choice(list(supper_jct.keys()))
-
-        text_diet = "<b>Завтрак:</b>\n" \
-                    f"{breakfast_position} → <a href='{breakfast_jct[breakfast_position]}'>рецепт</a>\n\n" \
-                    f"<b>Обед:</b>\n" \
-                    f"{dinner_position} → <a href='{dinner_jct[dinner_position]}'>рецепт</a>\n\n" \
-                    f"<b>Ужин:</b>\n" \
-                    f"{supper_position} → <a href='{supper_jct[supper_position]}'>рецепт</a>"
-        bot.send_message(message.chat.id, text_diet, parse_mode='html')
+    except KeyError:
+        sorry_text = "<b>Извините, я запутался...</b> Попробуйте еще раз."
+        bot.send_message(message.chat.id, sorry_text, parse_mode='html')
+        markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+        item1 = types.KeyboardButton("диабет 💉")
+        item2 = types.KeyboardButton("ис 🩸")
+        item3 = types.KeyboardButton("проблемы с жкт 💊")
+        item4 = types.KeyboardButton("советы для всех 📝")
+        markup.add(item1, item2, item3, item4)
+        bot.send_message(message.chat.id, '<b>Выбери подходящую категорию</b>', reply_markup=markup, parse_mode='html')
 
 @bot.message_handler(func=lambda message: message.text=='таблица ГИ')
 def table_gi(message):
@@ -321,10 +332,21 @@ def table_gi(message):
 
 @bot.message_handler(func=lambda message: message.text=='что нельзя ❌')
 def cannot(message):
-    if chapter[message.from_user.id] == 0:
-        bot.send_message(message.chat.id, cannot_dia, parse_mode='html')
-    elif chapter[message.from_user.id] == 1:
-        bot.send_message(message.chat.id, cannot_irt, parse_mode='html')
+    try:
+        if chapter[message.from_user.id] == 0:
+            bot.send_message(message.chat.id, cannot_dia, parse_mode='html')
+        elif chapter[message.from_user.id] == 1:
+            bot.send_message(message.chat.id, cannot_irt, parse_mode='html')
+    except KeyError:
+        sorry_text = "<b>Извините, я запутался...</b> Попробуйте еще раз."
+        bot.send_message(message.chat.id, sorry_text, parse_mode='html')
+        markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+        item1 = types.KeyboardButton("диабет 💉")
+        item2 = types.KeyboardButton("ис 🩸")
+        item3 = types.KeyboardButton("проблемы с жкт 💊")
+        item4 = types.KeyboardButton("советы для всех 📝")
+        markup.add(item1, item2, item3, item4)
+        bot.send_message(message.chat.id, '<b>Выбери подходящую категорию</b>', reply_markup=markup, parse_mode='html')
 
 @bot.message_handler(func=lambda message: message.text=='что можно ✅')
 def good(message):
