@@ -758,7 +758,7 @@ def d_B(message):
 
 @bot.message_handler(func=lambda message: message.text=='базовые анализы')
 def analysis(message):
-    analysis_text = "Я приготовил для тебя список базовых анализов, " \ 
+    analysis_text = "Я приготовил для тебя список базовых анализов, " \
                     "которые необходимо сдавать ежегодно для поддержания своего здоровья."
 
     bot.send_message(message.chat.id, analysis_text, parse_mode='html')
