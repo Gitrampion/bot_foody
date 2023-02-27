@@ -240,7 +240,7 @@ def start(message):
 
     markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
     item1 = types.KeyboardButton("диабет 💉")
-    item2 = types.KeyboardButton("ис 🩸")
+    item2 = types.KeyboardButton("ир 🩸")
     item3 = types.KeyboardButton("проблемы с жкт 💊")
     item4 = types.KeyboardButton("советы для всех 📝")
     markup.add(item1, item2, item3, item4)
@@ -316,7 +316,7 @@ def diet(message):
         bot.send_message(message.chat.id, sorry_text, parse_mode='html')
         markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
         item1 = types.KeyboardButton("диабет 💉")
-        item2 = types.KeyboardButton("ис 🩸")
+        item2 = types.KeyboardButton("ир 🩸")
         item3 = types.KeyboardButton("проблемы с жкт 💊")
         item4 = types.KeyboardButton("советы для всех 📝")
         markup.add(item1, item2, item3, item4)
@@ -342,7 +342,7 @@ def cannot(message):
         bot.send_message(message.chat.id, sorry_text, parse_mode='html')
         markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
         item1 = types.KeyboardButton("диабет 💉")
-        item2 = types.KeyboardButton("ис 🩸")
+        item2 = types.KeyboardButton("ир 🩸")
         item3 = types.KeyboardButton("проблемы с жкт 💊")
         item4 = types.KeyboardButton("советы для всех 📝")
         markup.add(item1, item2, item3, item4)
@@ -356,7 +356,7 @@ def good(message):
 def sugar(message):
     bot.send_message(message.chat.id, sugar_dia, parse_mode='html')
 
-@bot.message_handler(func=lambda message: message.text=='ис 🩸')
+@bot.message_handler(func=lambda message: message.text=='ир 🩸')
 def irt(message):
     global chapter
     chapter[message.from_user.id] = 1
@@ -373,7 +373,7 @@ def irt(message):
 def main_menu(message):
     markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
     item1 = types.KeyboardButton("диабет 💉")
-    item2 = types.KeyboardButton("ис 🩸")
+    item2 = types.KeyboardButton("ир 🩸")
     item3 = types.KeyboardButton("проблемы с жкт 💊")
     item4 = types.KeyboardButton("советы для всех 📝")
     markup.add(item1, item2, item3, item4)
