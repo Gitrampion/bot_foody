@@ -764,4 +764,12 @@ def analysis(message):
     bot.send_message(message.chat.id, analysis_text, parse_mode='html')
     with open('./images/analysis.png', 'rb') as photo:
         bot.send_photo(message.chat.id, photo)
-bot.polling(none_stop=True, interval=0)
+        
+while True:
+    try:
+        bot.polling(non_stop=True, interval=0)
+    except Exception as e:
+        print(e)
+        time.sleep(5)
+        continue
+#bot.polling(none_stop=True, timeout=30, interval=0)
