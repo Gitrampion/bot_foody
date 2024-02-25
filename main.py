@@ -1,4 +1,5 @@
 import json
+import os
 from brain import Brain
 
 
@@ -13,7 +14,7 @@ except Exception as e:
     print('PrepareData4Foody', e)
 
 try:
-    foody = Brain(api_key='6035859101:AAEjqd24_RcN8fblJ_ZsS6ZD1_T3s1a34BI',
+    foody = Brain(api_key=os.getenv('BotAPI'),
                   main_msgs=main_msgs_data, recipes_msgs=recipes_msgs_data,
                   keyboard_interfaces=keyboard_interfaces_data)
 except Exception as e:
