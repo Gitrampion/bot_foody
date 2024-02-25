@@ -1,0 +1,50 @@
+{
+  "breakfast_jct": {
+                 "Пшено-киноа с тыквой": "https://www.gastronom.ru/recipe/amp/51510",
+                 "Овсяная каша на кокосовом молоке": "https://hi-chef.ru/recipe/13073-ovsjanaja-kasha-na-kokosovom-moloke",
+                 "Пшенная каша на кокосовом молоке": "https://lefood.menu/recipes/pshennaya-kasha-na-kokosovom-moloke",
+                 "Амарантовая каша с тыквой": "https://www.povarenok.ru/recipes/show/147701",
+                 "Зелёная гречка на растительном молоке": "https://pp-prozozh.ru/zelenaja-grechka-na-kokosovom-moloke.html",
+                 "Омлет с авокадо": "https://www.gastronom.ru/recipe/amp/45927"
+  },
+  "dinner_jct": {
+                "Спагетти из чечевицы с баклажанами": "https://vkusvill.ru/media/recipes/spagetti-iz-chechevitsy-s-baklazhanami.html",
+                "Гречка с овощами": "https://1000.menu/amp/cooking/29313-grechka-na-skovorode-s-ovoschami",
+                "Боул с красной рыбой": "https://www.edimdoma.ru/retsepty/143517-boul-s-zapechennym-lososem.amp",
+                "Оладья из цукини + овощной салат + зелень": "https://calorizator.ru/recipe/47684",
+                "Рагу Рататуй": "https://shkoladiabeta.ru/living/food/recipes/goryachee/ragu-ratatuy",
+                "Горбуша на овощной подушке": "https://menunedeli.ru/recipe/gorbusha-v-multivarke-na-ovoshhnoj-podushke"
+  },
+  "supper_jct": {
+              "Творожок из зелёной гречки": "https://www.iamcook.ru/showrecipe/19818",
+              "Киноа + котлета из индейки и цукини + зелень (руккола, шпинат, зелёный лук)": "https://kulinarenok.ru/kotlety-iz-indeyki-s-kabachkom-v-duhovke",
+              "Скрембл из яиц и брокколи": "http://oede.by/recipe/vtorye_blyuda/yajca__skrjembl",
+              "Шоколадный брауни из цукини": "https://youtu.be/uFyMIKEqk5w",
+              "Кокосовые кексы": "https://youtu.be/ZRDANxgqJWc",
+              "Пюре из нута + куриная котлета + овощи": "https://www.gotovim.ru/sbs/bitochkurfarshnut.shtml"
+  },
+  "breakfast_dia": {
+              "Омлет на кокосовом молоке со шпинатом": "https://health-diet.ru/table_calorie_users/amp/2039125",
+              "Творожок из зелёной гречки": "https://www.iamcook.ru/showrecipe/19818",
+              "Овсяная каша (из цельного зерна) на кокосовом масле/масле ГХИ с орехами": "https://modernfamilycook.com/recipe-items/kasha-iz-tselnogo-ovsa",
+              "Киноа + котлета из индейки и цукини + зелень (руккола, шпинат, зелёный лук)": "https://kulinarenok.ru/kotlety-iz-indeyki-s-kabachkom-v-duhovke",
+              "Боул с красной рыбой": "https://www.edimdoma.ru/retsepty/143517-boul-s-zapechennym-lososem.amp",
+              "Оладья из цукини + овощной салат + зелень": "https://calorizator.ru/recipe/47684"
+  },
+  "dinner_dia": {
+              "Пюре из нута + куриная котлета + овощи": "https://www.gotovim.ru/sbs/bitochkurfarshnut.shtml",
+              "Горбуша на овощной подушке": "https://menunedeli.ru/recipe/gorbusha-v-multivarke-na-ovoshhnoj-podushke",
+              "Фриттата с цуккини, шпинатом и томатами": "https://menunedeli.ru/recipe/frittata-s-cukkini-shpinatom-i-tomatami",
+              "Филе Палтуса + рис бурый + овощи": "https://menunedeli.ru/recipe/file-paltusa-v-duxovke",
+              "Шоколадный брауни из цукини": "https://youtu.be/uFyMIKEqk5w",
+              "Кокосовые кексы": "https://youtu.be/ZRDANxgqJWc"
+  },
+  "supper_dia": {
+              "Скрембл из яиц и брокколи": "http://oede.by/recipe/vtorye_blyuda/yajca__skrjembl",
+              "Курица, запечённая с овощами": "https://1000.menu/cooking/50341-pp-kurica-zapechennaya-s-ovoshchami-v-duxovke",
+              "Белковый торт с куриным филе": "https://chef.tm/recipe/336111/5_originalnyh_idej_dlya_belkovogo_uzhina",
+              "Тушенные кальмары с овощами": "https://menunedeli.ru/2011/05/tushenye-kalmary-s-lukom-i-morkovyu",
+              "Рагу Рататуй": "https://shkoladiabeta.ru/living/food/recipes/goryachee/ragu-ratatuy"
+  }
+
+}
